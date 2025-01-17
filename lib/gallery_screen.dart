@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/gallery_data.dart';
 import 'package:image_gallery/gallery_item.dart';
+import 'package:image_gallery/tappable_card.dart';
 
 class GalleryScreen extends StatelessWidget {
   const GalleryScreen({
@@ -18,7 +19,7 @@ class GalleryScreen extends StatelessWidget {
         padding: EdgeInsets.all(16),
         children: [
           for (GalleryItem galleryItem in galleryData)
-            Placeholder()
+            TappableCard(galleryItem: galleryItem)
         ],
       ),
     );
