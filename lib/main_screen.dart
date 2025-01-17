@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_gallery/gallery_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       body: [
-        Placeholder(), // index 0
+        GalleryScreen(), // index 0
         Placeholder(), // index 1
       ][selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
