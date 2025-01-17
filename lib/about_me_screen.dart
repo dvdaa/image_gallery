@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_gallery/gen/assets.gen.dart';
+import 'package:image_gallery/style.dart';
 
 class AboutMeScreen extends StatefulWidget {
   const AboutMeScreen({
@@ -50,15 +51,15 @@ class _AboutMeScreenState extends State<AboutMeScreen> {
                 Text(
                   "Kaya Müller",
                   style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w500,
+                    fontSize: Style.titleFontSize,
+                    fontWeight: Style.titleFontWeight,
                   ),
                 ),
                 Text(
                   "Fotograf",
                   style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
+                    fontSize: Style.subtitleFontSize,
+                    fontWeight: Style.subtitleFontWeight,
                   ),
                 ),
               ],
@@ -69,7 +70,7 @@ class _AboutMeScreenState extends State<AboutMeScreen> {
           bioText,
           textAlign: TextAlign.justify,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: Style.bodyFontSize,
           ),
         )
       ],

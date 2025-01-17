@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/details_screen.dart';
 import 'package:image_gallery/gallery_item.dart';
+import 'package:image_gallery/style.dart';
 
 class TappableCard extends StatefulWidget {
   final GalleryItem galleryItem;
@@ -38,8 +39,8 @@ class _TappableCardState extends State<TappableCard> {
                 child: Text(
                   widget.galleryItem.imageTitle,
                   style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
+                    fontSize: Style.cardFontSize,
+                    fontWeight: Style.cardFontWeight,
                   ),
                 ),
               ),

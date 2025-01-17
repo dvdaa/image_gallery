@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/gallery_item.dart';
 import 'package:intl/intl.dart';
+import 'package:image_gallery/style.dart';
 
 class DetailsScreen extends StatefulWidget {
   final GalleryItem galleryItem;
@@ -51,7 +52,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     widget.galleryItem.imageTitle,
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: 32,
+                      fontSize: Style.titleFontSize ,
                     ),
                   ),
                 ),
@@ -62,8 +63,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         .format(widget.galleryItem.imageDate),
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
+                      fontSize: Style.subtitleFontSize,
+                      fontWeight: Style.subtitleFontWeight,
                     ),
                   ),
                 ),
@@ -72,7 +73,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   child: Text(
                     widget.galleryItem.imageDescription,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: Style.bodyFontSize,
                     ),
                   ),
                 ),

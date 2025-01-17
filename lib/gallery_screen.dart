@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:image_gallery/gallery_data.dart';
 import 'package:image_gallery/gallery_item.dart';
 import 'package:image_gallery/tappable_card.dart';
+import 'package:image_gallery/style.dart';
 
 class GalleryScreen extends StatelessWidget {
   const GalleryScreen({
@@ -11,7 +12,7 @@ class GalleryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 232, 222, 225),
+      backgroundColor: Style.backgroundColor,
       body: GridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 16,

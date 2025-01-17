@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/about_me_screen.dart';
 import 'package:image_gallery/gallery_screen.dart';
+import 'package:image_gallery/style.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,11 +17,11 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 89, 0, 28),
+        backgroundColor: Style.primaryColor,
         title: Center(
           child: Text(
             "MyGallery",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+            style: TextStyle(color: Colors.white, fontWeight: Style.appBarFontWeight)),
         ),
       ),
       body: [
@@ -28,8 +29,8 @@ class _MainScreenState extends State<MainScreen> {
         AboutMeScreen(), // index 1
       ][selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 241, 234, 246),
-        selectedItemColor: Color.fromARGB(255, 89, 0, 28),
+        backgroundColor: Style.backgroundColor,
+        selectedItemColor: Style.primaryColor,
         currentIndex: selectedScreen,
         onTap: (i) {
           setState(() {
