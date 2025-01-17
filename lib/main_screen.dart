@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_gallery/about_me_screen.dart';
 import 'package:image_gallery/gallery_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body: [
         GalleryScreen(), // index 0
-        Placeholder(), // index 1
+        AboutMeScreen(), // index 1
       ][selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromARGB(255, 241, 234, 246),
