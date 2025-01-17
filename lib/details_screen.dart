@@ -18,17 +18,24 @@ class _DetailsScreenState extends State<DetailsScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Style.primaryColor,
         leading: GestureDetector(
           child: Icon(
             Icons.chevron_left,
             size: 40,
+            color: Colors.white,
           ),
           onTap: () {
             Navigator.pop(context);
           },
         ),
         automaticallyImplyLeading: false,
-        title: Text("Details"),
+        title: Text(
+          "Details",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: Style.appBarFontWeight,
+          )),
       ),
       body: ListView(
         children: [
