@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_gallery/details_screen.dart';
 import 'package:image_gallery/gallery_item.dart';
 
 class TappableCard extends StatefulWidget {
@@ -18,7 +19,7 @@ class _TappableCardState extends State<TappableCard> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Placeholder()
+            builder: (context) => DetailsScreen(galleryItem: widget.galleryItem)
           ),
         );
       },
