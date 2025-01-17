@@ -19,11 +19,11 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: [
         CustomAppBar(title: "MyGallery"), // index 0
-        CustomAppBar(title: "Details"), // index 1
+        CustomAppBar(title: "Details"),   // index 1
       ][selectedScreen],
       body: [
-        GalleryScreen(), // index 0
-        AboutMeScreen(), // index 1
+        GalleryScreen(),                  // index 0
+        AboutMeScreen(),                  // index 1
       ][selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Style.backgroundColor,
@@ -38,14 +38,14 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: [
           BottomNavigationBarItem(
-            label: "Gallery",
+            label: "Bilder",
             icon: Padding(
               padding: const EdgeInsets.all(4.0),
               child: Icon(Icons.photo),
             ),
           ),
           BottomNavigationBarItem(
-            label: "About Me",
+            label: "Über mich",
             icon: Padding(
               padding: const EdgeInsets.all(4.0),
               child: Icon(Icons.person),
