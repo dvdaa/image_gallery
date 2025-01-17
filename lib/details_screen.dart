@@ -30,12 +30,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
           },
         ),
         automaticallyImplyLeading: false,
-        title: Text(
-          "Details",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: Style.appBarFontWeight,
-          )),
+        title: Text("Details",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: Style.appBarFontWeight,
+            )),
       ),
       body: ListView(
         children: [
@@ -59,7 +58,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     widget.galleryItem.imageTitle,
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontSize: Style.titleFontSize ,
+                      fontSize: Style.titleFontSize,
                     ),
                   ),
                 ),

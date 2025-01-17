@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/about_me_screen.dart';
+import 'package:image_gallery/custom_app_bar.dart';
 import 'package:image_gallery/gallery_screen.dart';
 import 'package:image_gallery/style.dart';
 
@@ -16,14 +17,10 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Style.primaryColor,
-        title: Center(
-          child: Text(
-            "MyGallery",
-            style: TextStyle(color: Colors.white, fontWeight: Style.appBarFontWeight)),
-        ),
-      ),
+      appBar: [
+        CustomAppBar(title: "MyGallery"), // index 0
+        CustomAppBar(title: "Details"), // index 1
+      ][selectedScreen],
       body: [
         GalleryScreen(), // index 0
         AboutMeScreen(), // index 1
@@ -33,9 +30,11 @@ class _MainScreenState extends State<MainScreen> {
         selectedItemColor: Style.primaryColor,
         currentIndex: selectedScreen,
         onTap: (i) {
-          setState(() {
-            if (selectedScreen != i) selectedScreen = i;
-          },);
+          setState(
+            () {
+              if (selectedScreen != i) selectedScreen = i;
+            },
+          );
         },
         items: [
           BottomNavigationBarItem(
